@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nurzat Asanbekova</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="header-navigation">
+          <div class="container1">
+            <a id="logo" class="header-logo" href="#">asnuor</a>
+            <ul class="menu">
+              <li class="menu-item">
+                <a class="menu-link" href="#contacts">Contacts</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-link" href="#About_me">About me</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-link" href="#skills">Skills</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-link" href="#codeexamples">Code examples</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-link" href="#experience">Experience</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-link" href="#education">Education</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-link" href="#languages">Laguages</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <img src="/images/1.jpeg" alt="My avatar" width="240" />
+      <h1>Nurzat Asanbekova</h1>
+      <h3>A future Front-end developer. But a teacher now.</h3>
+      <p>
+        I am Nurzat. I am currently working as a teacher in one of the capital's
+        universities. I want to change my profession, for which I am here. I am
+        very interested in web development. IT is a profession of complete
+        freedom, inspiration. Undoubtedly, the future belongs to programmers. I
+        want to become a programmer and travel the world.
+      </p>
+      <h3 id="contacts">Contacts</h3>
+      <ul>
+        <li>
+          <h5>Email</h5>
+          <a href="mailto:nurzat.asanbekova.kk@gmail.com"
+            >nurzat.asanbekova.kk@gmail.com</a
+          >
+        </li>
+        <li>
+          <h5>Phone</h5>
+          <a href="tel:+996702225722">+996702225722</a>
+        </li>
+        <li>
+          <h5>Location</h5>
+          <a
+            href="https://2gis.kg/bishkek/firm/70000001019364949/74.603795%2C42.877556?m=74.604241%2C42.876647%2F17.92"
+            >Bishkek</a
+          >
+        </li>
+      </ul>
+    </header>
+
+    <main>
+      <section id="About_me">
+        <h3>About me</h3>
+        <p>
+          You can view personal information about me at the following link:
+          <a href="https://www.instagram.com/asnuor/"> Personal Information</a>
+          And you can find out about my scientific activity at the following
+          link:
+          <a href="http://vak.kg/post-group/asanbekova-nurzat-orozobekovna/">
+            My science</a
+          >
+        </p>
+      </section>
+      <section id="skills">
+        <h3>Skills</h3>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Python</li>
+          <li>The all office applications</li>
+        </ul>
+      </section>
+      <section id="codeexamples">
+        <h3>Code examples</h3>
+        <h2>
+          Найти количество положительных, отрицательных и равных нулю случайных
+          элементов массива.
+        </h2>
+        <pre>
+                    <code>
+                            from random import random
+                            neg = pos = zero = 0
+                            a = []
+                            for i in range(20):
+                                n = int(random() * 10) - 5
+                                a.append(n)
+                                print(n, end=' ')
+                                if n > 0:
+                                   pos += 1
+                             elif n &lt; 0:
+                                    neg += 1
+                                else:
+                                    zero += 1
+                                print("\nПоложительных: ", pos)
+                                print("Отрицательных: ", neg)
+                                print("Равных нулю: ", zero)
+                                Результат:
+                                -5 2 3 -1 4 1 1 4 -3 -3 -2
+                    </code>
+                </pre>
+        <h2>
+          Элементы матрицы NxM вычисляются по формуле A[i,j] = sin(N*i+M*j) при
+          индексации с единицы или по формуле A[i,j] = sin(N*(i+1)+M*(j+1)) при
+          индексации с нуля. Если полученный таким образом элемент матрицы
+          отрицателен, то заменить его на 0. Вывести конечную матрицу на экран.
+        </h2>
+        <pre>
+                    <code>
+                            from math import sin
+                            N = 3
+                            M = 4
+                            mtx = []
+                            for i in range(N):
+                                a = []
+                                for j in range(M):
+                                    a.append(sin(N*(i+1) + M*(j+1)))
+                                mtx.append(a)
+                             for i in range(N):
+                             for j in range(M):
+                                    if mtx[i][j] &lt; 0:
+                                        mtx[i][j] = 0
+                                     print("%7.0f" % mtx[i][j], end='')
+                                 else:
+                                     print("%7.2f" % mtx[i][j], end='')
+                             print()
+
+                    </code>
+                </pre>
+        <h2>Вывести на экран индексы всех минимальных элементов матрицы.</h2>
+        <pre>
+                    <code>
+                            from random import random
+                            M = 7
+                            N = 5
+                            a = []
+                            for i in range(N):
+                             b = []
+                             for j in range(M):
+                                    b.append(int(random()*50) - 25)
+                                    print("%4d" % b[j], end='')
+                                a.append(b)
+                                print()
+                            min_mx = 25
+                            for i in range(N):
+                             min_i = min(a[i])
+                             if min_i &lt; min_mx:
+                                    min_mx = min_i
+                            print(min_mx)
+                            for i in range(N):
+                                for j in range(M):
+                                if min_mx == a[i][j]:
+                                print('Row: %d, col: %d' % (i+1,j+1))
+                    </code>
+                </pre>
+      </section>
+      <section id="experience">
+        <h3>Experience</h3>
+        <p>
+          I work at a university. I teach subjects like "Mathematical Methods in
+          Economics", "Decision Theory", "Learning Design". But, since the
+          lectures I give are very different from each other, I have to study a
+          lot of different subjects from completely different areas of science.
+          It takes a lot of my time and I hardly find time for myself and my
+          family. For this reason, I want to change my profession, and narrowly,
+          in one direction, I want to learn how to write code for front-end
+          development.
+        </p>
+      </section>
+      <section id="education">
+        <h3>Education</h3>
+        <ol>
+          <li>
+            Kyrgyz State University named after I. Arabaev, Institute of New
+            Information Technologies
+          </li>
+          <li>
+            Kyrgyz State University named after I. Arabaev, Master's Degree -
+            Management in Education
+          </li>
+          <li>PhD</li>
+        </ol>
+      </section>
+      <section id="languages">
+        <h3>Languages</h3>
+        <ul>
+          <li>Kyrgyz - free</li>
+          <li>Russian - free</li>
+          <li>English - with dictionary</li>
+        </ul>
+      </section>
+      <section id="my page">
+        <h3>My page</h3>
+      </section>
+    </main>
+    <footer>
+      2022 &copy;
+      <a href="https://www.instagram.com/asnuor/">Nurzat Asanbekova</a>
+      <a href="https://linktr.ee/jyldyzacademy2020"> JyldyzAcademy </a>
+    </footer>
+  </body>
+</html>
+© 2022 GitHub, Inc. Terms Privacy Security Status Docs Contact GitHub Pricing
+API Training Blog About Loading complete
